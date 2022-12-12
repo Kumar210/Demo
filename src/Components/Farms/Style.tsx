@@ -55,7 +55,10 @@ const useStyles = createStyles((theme) => ({
     select: {
         marginLeft: '5px',
         border: '1px solid #97FBFF',
-        borderRadius: '5px'
+        borderRadius: '5px',
+        '&:placeholder': {
+            color: 'red'
+        },
     },
     // Card
     CardCointainer: {
@@ -74,7 +77,7 @@ const useStyles = createStyles((theme) => ({
     },
     CardTextCointainer: {
         display: 'flex',
-        flexDirection: 'column'
+        justifyContent: 'space-evenly'
     },
     Card_img_txt_Cointainer: {
         display: 'flex',
@@ -90,13 +93,6 @@ const useStyles = createStyles((theme) => ({
             background: '#A4A2A8',
         },
     },
-    textField: {
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        width: '100%',
-        marginTop: '-1em'
-    },
     iconCointainer: {
         display: 'flex',
         justifyContent: 'center',
@@ -106,7 +102,6 @@ const useStyles = createStyles((theme) => ({
     // hoverCard
     hoverCardCointainer: {
         padding: '10px',
-        // transition: 'all .75s ease',
 
 
     },
@@ -115,20 +110,12 @@ const useStyles = createStyles((theme) => ({
         padding: '10px',
         display: 'flex',
         flexDirection: 'column',
-        // justifyContent: 'space-around'
-        // '&:show': {
-        //     width: '100%',
-        //     // padding: '10px',
-        //     // display: 'flex',
-        //     // flexDirection: 'column',
-        // },
     },
     hoverCardSubCointainer2: {
         background: theme.fn.linearGradient(90.46, 'rgba(118, 118, 118, 0.1)', 'rgba(173, 173, 173, 0.1)'),
         padding: '10px',
         display: 'flex',
         flexDirection: 'column',
-        // justifyContent: 'space-between'
     },
     hoverCardBtn: {
         width: '10em',
@@ -160,6 +147,24 @@ const useStyles = createStyles((theme) => ({
     },
     conformBtn: {
         width: '15em'
+    },
+    transferModelCointainer: {
+        padding: '10px',
+        lineHeight: '5px'
+
+    },
+    transferModelHeading: {
+        padding: '10px'
+    },
+    transferModelFld_Cointainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        padding: '10px',
+
+    },
+    transferModelFields: {
+        display: 'flex',
+        justifyContent: 'space-between'
     }
 
 

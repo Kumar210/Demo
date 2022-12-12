@@ -2,7 +2,8 @@ import React from 'react'
 import { useStyles } from './Style'
 import { Button, Grid, GroupedTransition, Space, Text, OptionalPortal, Collapse, Badge } from '@mantine/core'
 import { IconCheck, IconChevronDown, IconChevronUp } from '@tabler/icons'
-import Model from './Model'
+import Model from './StaclLP_Model'
+import Transfermodal from './TransferModel'
 type CardProps = {
     Peername: string;
     Earned: any
@@ -17,6 +18,7 @@ const Card: React.FC<CardProps> = (props) => {
     const { classes, theme } = useStyles()
     const [hoverCard, setHoverCard] = React.useState<boolean>(false)
     const [model, setModel] = React.useState<boolean>(false)
+    const [transferModel, setTransferModel] = React.useState<boolean>(false)
     return (
         <>
             <Grid className={classes.CardCointainer} onClick={() => setHoverCard(!hoverCard)} >
@@ -40,19 +42,22 @@ const Card: React.FC<CardProps> = (props) => {
                 </Grid.Col>
 
                 <Grid.Col md={4} lg={6} className={classes.CardTextCointainer} >
-                    <div className={classes.textField} >
+
+                    <div  >
                         <p>Earned</p>
-                        <p>APR</p>
-                        <p>Liquidity</p>
-                        <p>Multiplier</p>
-
-                    </div>
-                    <div className={classes.textField} >
                         <p>{Earned}</p>
+                    </div>
+                    <div>
+                        <p>APR</p>
                         <p>{APR}</p>
+                    </div>
+                    <div>
+                        <p>Liquidity</p>
                         <p>{Liquidity}</p>
+                    </div>
+                    <div>
+                        <p>Multiplier</p>
                         <p>{Multiplier}</p>
-
                     </div>
 
                 </Grid.Col>
@@ -78,6 +83,12 @@ const Card: React.FC<CardProps> = (props) => {
                 onClose={() => setModel(!model)}
                 show={model}
             />
+            <Transfermodal
+                onClose={() => setTransferModel(!transferModel)}
+                show={transferModel}
+            />
+
+
             <Collapse in={hoverCard} transitionDuration={400} transitionTimingFunction="linear"  >
                 <Grid className={classes.hoverCardCointainer} >
                     <Grid.Col md={4} lg={4}  >
@@ -97,14 +108,14 @@ const Card: React.FC<CardProps> = (props) => {
                         <div className={classes.hoverCardSubCointainer}>
                             <Text size='lg' >Earned</Text>
                             <Text>0.000000</Text>
-                            <Button variant='outline' color='gray.4' size='sm' radius='xl' className={classes.hoverCardBtn} onClick={() => setModel(true)} >Transfer</Button>
+                            <Button variant='outline' color='gray.4' size='sm' radius='xl' className={classes.hoverCardBtn} onClick={() => setTransferModel(true)} >Transfer</Button>
                         </div>
                     </Grid.Col>
                     <Grid.Col md={4} lg={4}>
                         <div className={classes.hoverCardSubCointainer2}>
                             <Text size='lg' >Start Farming</Text>
                             <div  >
-                                <Button size='sm' className={classes.hoverCardBtn2} >Connect Wallet</Button>
+                                <Button size='sm' className={classes.hoverCardBtn2} onClick={() => setModel(true)}  >Connect Wallet</Button>
                             </div>
                         </div>
                     </Grid.Col>
