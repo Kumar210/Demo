@@ -14,6 +14,7 @@ const Model: React.FC<ModelProps> = (props) => {
     return (
 
         <Modal
+
             transition="fade"
             transitionDuration={300}
             transitionTimingFunction="ease"

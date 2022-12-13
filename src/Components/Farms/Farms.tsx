@@ -10,21 +10,21 @@ const Farms = () => {
             Peername: "YOC/BNB",
             Earned: '25',
             APR: '25.2%',
-            Liquidity: "$4567489",
+            Liquidity: "4567489",
             Multiplier: '10x'
         },
         {
             Peername: "BTC/USDC",
             Earned: '25',
             APR: '25.2%',
-            Liquidity: "$4567489",
+            Liquidity: "4567489",
             Multiplier: '10x'
         },
         {
             Peername: "NEAR/USD",
             Earned: '30',
             APR: '0.5%',
-            Liquidity: "$878789",
+            Liquidity: "878789",
             Multiplier: '420x'
         }
     ])

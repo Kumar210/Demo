@@ -1,41 +1,84 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.SwapPageCointainer {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 220, 159, 0.3) 34.7%,
+    rgba(188, 44, 216, 0.06) 100%
+  );
+  /* width: 80%;
+  height: 70%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 1em;
+  /*  left: 5em;
+  bottom: 0; */
+  /* margin-left: 8em; */
+  top: 0.5em;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 4px 15px #2af6ff;
 }
+.SwapPageCointainer1 {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 220, 159, 0.3) 34.7%,
+    rgba(188, 44, 216, 0.06) 100%
+  );
+  width: 70%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* margin-top: -1em;
+  bottom: 0; */
+  margin-left: 13em;
+  backdrop-filter: blur(10px);
+}
+/* SwapPage BagroundCointainer */
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
+.ParentCointainer {
+  /* background: red; */
+  width: 90%;
+  height: 110%;
+  background: url(/SwapBackGround.svg);
+  background-repeat: no-repeat;
+  background-size: 40em, 40em;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+/* fund page Buy PopUp input field */
+.input {
+  border: none;
+  border-bottom: 1px dashed #ffffff;
+  padding: 5px 10px;
+  outline: none;
+  width: 70%;
+  background: transparent;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+[placeholder]:focus::-webkit-input-placeholder {
+  /* transition: text-indent 0.4s 0.4s ease;  */
+  /* text-indent: -100%; */
+  opacity: 1;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.swapinput::-webkit-input-placeholder {
+  font-size: 13px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.swapinput {
+  width: 20%;
+  border: 1px solid #97fbff;
+  background-color: #28882b;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 2px;
 }
-
-.card {
-  padding: 2em;
+.swapinput:hover {
+  background-color: #165a19;
 }
-
-.read-the-docs {
-  color: #888;
+.swapinput1 {
+  width: 20%;
+  border: 1px solid #97fbff;
+  background-color: #649e37;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 2px;
+}
+.swapinput1:hover {
+  background-color: #50871c;
 }

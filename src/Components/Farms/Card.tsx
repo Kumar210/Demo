@@ -1,9 +1,10 @@
 import React from 'react'
 import { useStyles } from './Style'
-import { Button, Grid, GroupedTransition, Space, Text, OptionalPortal, Collapse, Badge } from '@mantine/core'
+import { Button, Grid, GroupedTransition, Space, Text, OptionalPortal, Collapse, Badge, Avatar } from '@mantine/core'
 import { IconCheck, IconChevronDown, IconChevronUp } from '@tabler/icons'
 import Model from './StaclLP_Model'
 import Transfermodal from './TransferModel'
+import CountUp from 'react-countup';
 type CardProps = {
     Peername: string;
     Earned: any
@@ -29,6 +30,10 @@ const Card: React.FC<CardProps> = (props) => {
                             src='/logo 1.png'
                             className={classes.Icon}
                         />
+                        {/* <Avatar.Group spacing="xs" >
+                            <Avatar src="/logo 1.png" radius="xl" />
+                            <Avatar src="/logo 1.png" radius="xl" />
+                        </Avatar.Group> */}
                     </center>
                     <p>{Peername}</p>
                     <Button
@@ -50,10 +55,13 @@ const Card: React.FC<CardProps> = (props) => {
                     <div>
                         <p>APR</p>
                         <p>{APR}</p>
+
                     </div>
                     <div>
                         <p>Liquidity</p>
-                        <p>{Liquidity}</p>
+                        <p>$<CountUp delay={0} start={0.001} end={parseInt(Liquidity)} /></p>
+
+
                     </div>
                     <div>
                         <p>Multiplier</p>
