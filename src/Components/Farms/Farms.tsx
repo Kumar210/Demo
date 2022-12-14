@@ -1,10 +1,14 @@
 import React from 'react'
-import { Text, Button, Select, TextInput, SegmentedControl } from '@mantine/core';
+import { Text, Button, Select, TextInput, SegmentedControl, Badge } from '@mantine/core';
 import { useStyles } from './Style'
 import { IconArrowNarrowRight, IconSearch, IconChevronDown } from '@tabler/icons'
 import Card from './Card'
+import { Wallet } from "../Near/near-wallet";
+
 const Farms = () => {
     const { classes, theme } = useStyles()
+    // const wallet = new Wallet({});
+
     const [Data, setData] = React.useState([
         {
             Peername: "YOC/BNB",
@@ -28,8 +32,26 @@ const Farms = () => {
             Multiplier: '420x'
         }
     ])
-    console.log(Data);
 
+
+    // const NearWalletConecting = async () => {
+    //     const isSignedIn = await wallet.startUp();
+    //     setTimeout(() => {
+    //         wallet.signIn();
+    //     }, 500);
+    // };
+    React.useEffect(() => {
+
+        Calculate()
+    })
+    console.log("dhi");
+
+    const Calculate = () => {
+        return (
+            console.log((2.029426686960934e-8 * 31536000 * 2 * 20) / 64, "ouro")
+
+        )
+    }
     return (
         <div className={classes.Parent_Cointainer} >
             <div className={classes.Cointainer} >
@@ -82,9 +104,10 @@ const Farms = () => {
                         />
                     </div>
                     {
-                        Data ? Data.map((item) => {
+                        Data ? Data.map((item, i) => {
                             return (
                                 <Card
+                                    key={i}
                                     Peername={item.Peername}
                                     Earned={item.Earned}
                                     APR={item.APR}

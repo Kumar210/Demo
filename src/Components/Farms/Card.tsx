@@ -20,6 +20,8 @@ const Card: React.FC<CardProps> = (props) => {
     const [hoverCard, setHoverCard] = React.useState<boolean>(false)
     const [model, setModel] = React.useState<boolean>(false)
     const [transferModel, setTransferModel] = React.useState<boolean>(false)
+
+
     return (
         <>
             <Grid className={classes.CardCointainer} onClick={() => setHoverCard(!hoverCard)} >
@@ -30,19 +32,19 @@ const Card: React.FC<CardProps> = (props) => {
                             src='/logo 1.png'
                             className={classes.Icon}
                         />
-                        {/* <Avatar.Group spacing="xs" >
-                            <Avatar src="/logo 1.png" radius="xl" />
-                            <Avatar src="/logo 1.png" radius="xl" />
-                        </Avatar.Group> */}
+
                     </center>
                     <p>{Peername}</p>
-                    <Button
-                        size='xs'
-                        color='gray.6'
-                        className={classes.cardButton1}
-                        rightIcon={<IconCheck />}
 
-                    >Core</Button>
+                    <Badge
+                        variant='outline'
+                        rightSection={<IconCheck size={15} />}
+                        size='md'
+                        color='lime'
+                        bg='gray.6'
+                        style={{ marginLeft: '5px' }}
+                    >Core</Badge >
+
 
                 </Grid.Col>
 

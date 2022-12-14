@@ -6,8 +6,10 @@ import {
     Text,
     Space,
     NumberInput,
+    TextInput,
+    Select,
 } from "@mantine/core";
-import { IconSwitchVertical } from "@tabler/icons";
+import { IconChevronDown, IconSwitchVertical } from "@tabler/icons";
 import { useStyles } from './Style'
 import Model from './Model'
 
@@ -53,16 +55,21 @@ const Liquidity = () => {
                                 className={classes.SwapSubCointainer1}
                             >
                                 <div className={classes.InputCointainer}>
-                                    <div>
-                                        <Text  >Input</Text>
-                                        <NumberInput
-                                            hideControls
-                                            variant='unstyled'
-                                            className={classes.input}
-                                            placeholder="BNB"
-                                            size="xs"
-                                        />
-                                    </div>
+
+
+                                    <input
+                                        type="number"
+                                        placeholder="To"
+                                        className={classes.input}
+
+                                    />
+                                    <select className={classes.select} >
+                                        <option>HOT</option>
+                                        <option>APR</option>
+                                        <option>Multiplier</option>
+                                        <option>Earned</option>
+                                        <option>Liquidity</option>
+                                    </select>
                                 </div>
                                 <Text>Balance: 0</Text>
                             </div>
@@ -90,17 +97,20 @@ const Liquidity = () => {
                             }}
                         >
                             <div className={classes.InputCointainer}>
-                                <div>
-                                    <Text>Input</Text>
-                                    <NumberInput
-                                        hideControls
-                                        variant='unstyled'
-                                        className={classes.input}
-                                        size="xs"
-                                        placeholder="BELT"
-                                    />
-                                </div>
 
+                                <input
+                                    type="number"
+                                    placeholder="To"
+                                    className={classes.input}
+
+                                />
+                                <select className={classes.select}>
+                                    <option>APR</option>
+                                    <option>HOT</option>
+                                    <option>Multiplier</option>
+                                    <option>Earned</option>
+                                    <option>Liquidity</option>
+                                </select>
 
                             </div>
                             <Text>Balance: 0</Text>

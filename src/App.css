@@ -82,3 +82,8 @@
 .swapinput1:hover {
   background-color: #50871c;
 }
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}

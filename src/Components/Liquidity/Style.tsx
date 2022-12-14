@@ -37,14 +37,21 @@ const useStyles = createStyles((theme) => ({
         },
     },
     IconImage: {
-        // marginLeft: "17em",
         marginTop: "-2em",
         alignSelf: 'self-end'
     },
     input: {
         border: '1px solid #97FBFF',
-        width: '250px',
-
+        color: '#97FBFF',
+        fontSize: '15px',
+        background: 'transparent',
+        borderRadius: '5px',
+        // width: '10em',
+        padding: '10px',
+        '::placeholder': {
+            color: '#97FBFF',
+            fontSize: '1em'
+        }
     },
     conformBtn: {
         width: '15em',
@@ -79,7 +86,17 @@ const useStyles = createStyles((theme) => ({
         display: 'flex',
         alignItems: 'center',
 
-    }
+    },
+    select: {
+        display: 'flex',
+        marginLeft: '5px',
+        border: '1px solid #97FBFF',
+        borderRadius: '5px',
+        color: '#3c524f',
+        background: 'transparent',
+        // width: '10em',
+        fontWeight: 'bold'
+    },
 
 
 }));

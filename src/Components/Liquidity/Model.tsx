@@ -37,7 +37,7 @@ const Model: React.FC<ModelProps> = (props) => {
                         <Space h="sm" />
                     </div>
 
-                    <Divider size='md' c='#fff' />
+                    <Divider size='lg' c='grape' />
                 </div>
                 <div className={classes.transferModelFld_Cointainer} >
                     <div className={classes.transferModelFields} >

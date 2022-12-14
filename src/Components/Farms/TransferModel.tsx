@@ -9,7 +9,7 @@ type ModelProps = {
 const Model: React.FC<ModelProps> = (props) => {
     const { classes, theme } = useStyles()
     const { onClose, show } = props
-    console.log(onClose, show);
+    // console.log(onClose, show);
 
     return (
 

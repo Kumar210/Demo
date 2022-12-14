@@ -12,10 +12,20 @@
     "@emotion/react": "^11.10.5",
     "@mantine/core": "^5.9.2",
     "@mantine/hooks": "^5.9.2",
+    "@near-wallet-selector/core": "^7.3.0",
+    "@near-wallet-selector/ledger": "^7.3.0",
+    "@near-wallet-selector/modal-ui": "^7.3.0",
+    "@near-wallet-selector/my-near-wallet": "^7.3.0",
     "@tabler/icons": "^1.116.1",
+    "ethers": "^5.7.2",
+    "near-api-js": "^1.1.0",
     "react": "^18.2.0",
     "react-countup": "^6.4.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "svelte": "^3.55.0",
+    "userbase-js": "^2.8.0",
+    "wagmi": "0.7.7",
+    "webpack": "^5.75.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

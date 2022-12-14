@@ -9,6 +9,7 @@ function App() {
     <div>
       <Farms />
       {/* <Liquidty /> */}
+      {/* <Wallet /> */}
     </div>
   )
 }
