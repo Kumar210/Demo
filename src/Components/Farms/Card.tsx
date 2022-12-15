@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStyles } from './Style'
-import { Button, Grid, GroupedTransition, Space, Text, OptionalPortal, Collapse, Badge, Avatar } from '@mantine/core'
-import { IconCheck, IconChevronDown, IconChevronUp } from '@tabler/icons'
+import { Button, Grid, Space, Text, Collapse, Badge } from '@mantine/core'
+import { IconCheck, IconChevronDown, IconChevronUp, IconCircleCheck } from '@tabler/icons'
 import Model from './StaclLP_Model'
 import Transfermodal from './TransferModel'
 import CountUp from 'react-countup';
@@ -27,28 +27,44 @@ const Card: React.FC<CardProps> = (props) => {
             <Grid className={classes.CardCointainer} onClick={() => setHoverCard(!hoverCard)} >
                 <Grid.Col md={4} lg={3} className={classes.Card_img_txt_Cointainer} >
                     <center>
-
-                        <img
-                            src='/logo 1.png'
-                            className={classes.Icon}
-                        />
-
+                        <div style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        }} >
+                            <img
+                                src='/logo 1.png'
+                                className={classes.Icon}
+                            />
+                            <Space w="sm" />
+                            <p>{Peername}</p>
+                        </div>
                     </center>
-                    <p>{Peername}</p>
 
-                    <Badge
+
+                    {/* <Badge
                         variant='outline'
-                        rightSection={<IconCheck size={15} />}
                         size='md'
                         color='lime'
                         bg='gray.6'
                         style={{ marginLeft: '5px' }}
-                    >Core</Badge >
+                        leftSection={<IconCircleCheck size={15} />}
+                    >Core</Badge > */}
+                    <Button
+                        variant='outline'
+                        size='xs'
+                        style={{ marginLeft: '5px' }}
+                        radius='lg'
+                        leftIcon={<IconCircleCheck size={20} stroke={3} />}
+                        color='teal'
+                        bg='gray.7'
+                        className={classes.cardBadge_btn}
+                    >Core</Button>
 
 
                 </Grid.Col>
 
-                <Grid.Col md={4} lg={6} className={classes.CardTextCointainer} >
+                <Grid.Col md={4} lg={7} className={classes.CardTextCointainer} >
 
                     <div  >
                         <p>Earned</p>
@@ -56,14 +72,14 @@ const Card: React.FC<CardProps> = (props) => {
                     </div>
                     <div>
                         <p>APR</p>
-                        <p>{APR}</p>
+                        <p>
+                            {APR}
+                        </p>
 
                     </div>
                     <div>
                         <p>Liquidity</p>
-                        <p>$<CountUp delay={0} start={0.001} end={parseInt(Liquidity)} /></p>
-
-
+                        <p>$ <CountUp duration={0.7} start={0.001} end={parseInt(Liquidity)} /></p>
                     </div>
                     <div>
                         <p>Multiplier</p>
@@ -71,7 +87,7 @@ const Card: React.FC<CardProps> = (props) => {
                     </div>
 
                 </Grid.Col>
-                <Grid.Col md={4} lg={3} className={classes.iconCointainer} >
+                <Grid.Col md={4} lg={2} className={classes.iconCointainer} >
                     {
                         hoverCard ?
                             <IconChevronUp
@@ -99,7 +115,7 @@ const Card: React.FC<CardProps> = (props) => {
             />
 
 
-            <Collapse in={hoverCard} transitionDuration={400} transitionTimingFunction="linear"  >
+            <Collapse in={hoverCard} transitionDuration={300} transitionTimingFunction="linear"  >
                 <Grid className={classes.hoverCardCointainer} >
                     <Grid.Col md={4} lg={4}  >
                         <Text c='#2AF6FF' size='md' style={{
@@ -125,7 +141,7 @@ const Card: React.FC<CardProps> = (props) => {
                         <div className={classes.hoverCardSubCointainer2}>
                             <Text size='lg' >Start Farming</Text>
                             <div  >
-                                <Button size='sm' className={classes.hoverCardBtn2} onClick={() => setModel(true)}  >Connect Wallet</Button>
+                                <Button size='sm' color="grape.9" className={classes.hoverCardBtn2} onClick={() => setModel(true)}  >Connect Wallet</Button>
                             </div>
                         </div>
                     </Grid.Col>

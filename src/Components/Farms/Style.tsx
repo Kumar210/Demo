@@ -26,8 +26,7 @@ const useStyles = createStyles((theme) => ({
         justifyContent: 'flex-end',
     },
     text: {
-        marginTop: '0px',
-        fontSize: '15px',
+        fontSize: '17px',
     },
     textCointainer: {
         display: 'flex',
@@ -49,13 +48,18 @@ const useStyles = createStyles((theme) => ({
     textInput: {
         marginLeft: '5px',
         border: '1px solid #97FBFF',
-        borderRadius: '5px'
+        borderRadius: '5px',
+        width: '25%',
+        padding: '3px',
+
 
     },
     select: {
         marginLeft: '5px',
         border: '1px solid #97FBFF',
         borderRadius: '5px',
+        width: '25%',
+        padding: '3px',
         '&:placeholder': {
             color: 'red'
         },
@@ -73,7 +77,8 @@ const useStyles = createStyles((theme) => ({
         alignSelf: 'flex-start',
         height: '25px',
         width: '25px',
-        marginRight: '10px'
+        // marginRight: '10px'
+        marginTop: '15px'
     },
     CardTextCointainer: {
         display: 'flex',
@@ -82,7 +87,7 @@ const useStyles = createStyles((theme) => ({
     Card_img_txt_Cointainer: {
         display: 'flex',
         width: '20%',
-        justifyContent: 'center',
+        justifyContent: 'space-around',
         alignItems: 'center'
     },
     cardButton1: {
@@ -165,6 +170,11 @@ const useStyles = createStyles((theme) => ({
     transferModelFields: {
         display: 'flex',
         justifyContent: 'space-between'
+    },
+    cardBadge_btn: {
+        '&:hover': {
+            backgroundColor: theme.colors.gray[7]
+        }
     }
 
 

@@ -3,66 +3,46 @@ import { Text, Button, Select, TextInput, SegmentedControl, Badge } from '@manti
 import { useStyles } from './Style'
 import { IconArrowNarrowRight, IconSearch, IconChevronDown } from '@tabler/icons'
 import Card from './Card'
-import { Wallet } from "../Near/near-wallet";
 
 const Farms = () => {
     const { classes, theme } = useStyles()
-    // const wallet = new Wallet({});
-
     const [Data, setData] = React.useState([
         {
             Peername: "YOC/BNB",
             Earned: '25',
             APR: '25.2%',
-            Liquidity: "4567489",
+            Liquidity: "458767",
             Multiplier: '10x'
         },
         {
             Peername: "BTC/USDC",
             Earned: '25',
             APR: '25.2%',
-            Liquidity: "4567489",
+            Liquidity: "857489",
             Multiplier: '10x'
         },
         {
-            Peername: "NEAR/USD",
+            Peername: "Lorum Ipsum 1 /Lorum Ipsum ",
             Earned: '30',
             APR: '0.5%',
-            Liquidity: "878789",
+            Liquidity: "368789",
             Multiplier: '420x'
         }
     ])
 
 
-    // const NearWalletConecting = async () => {
-    //     const isSignedIn = await wallet.startUp();
-    //     setTimeout(() => {
-    //         wallet.signIn();
-    //     }, 500);
-    // };
-    React.useEffect(() => {
 
-        Calculate()
-    })
-    console.log("dhi");
-
-    const Calculate = () => {
-        return (
-            console.log((2.029426686960934e-8 * 31536000 * 2 * 20) / 64, "ouro")
-
-        )
-    }
     return (
         <div className={classes.Parent_Cointainer} >
             <div className={classes.Cointainer} >
                 <>
                     <div className={classes.Sub_Cointainer} >
-                        <h3 >YOC Liquidity Mining</h3>
+                        <h2>YOC Liquidity Mining</h2>
                         <p className={classes.text} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tortor felis nulla sit. Pretium fusce nisi, rutrum semper quam a amet a.
                             Elit a venenatis mattis massa sodales nec tellus. Nisl velit vel est, a mattis facilisi. </p>
                         <div className={classes.BtnCointainer} >
                             <Button variant='outline'
-                                color='white'
+                                color='cyan.4'
                                 rightIcon={<IconArrowNarrowRight />}
                             ><Text>Read More...</Text></Button>
                         </div>
@@ -71,15 +51,15 @@ const Farms = () => {
                     <div className={classes.textCointainer} >
                         <h3>Participating Pools</h3>
                         <h3>The Rewards Never Ends</h3>
-
                     </div>
                     <div className={classes.fieldCointainer} >
                         <SegmentedControl
-                            radius='lg'
+                            radius='md'
                             bg='transparent'
                             style={{
                                 border: '1px solid #97FBFF',
-                                width: '200px'
+                                width: '25%',
+                                padding: '6px',
                             }}
                             color='gray.7'
                             data={[
@@ -95,7 +75,9 @@ const Farms = () => {
                             rightSection={<IconChevronDown size={14} />}
                             className={classes.select}
                             onChange={(e) => console.log(e)}
-                        />
+
+                        >
+                        </Select>
                         <TextInput
                             variant='unstyled'
                             placeholder='Search Forms'

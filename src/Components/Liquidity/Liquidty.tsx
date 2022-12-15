@@ -5,9 +5,6 @@ import {
     Button,
     Text,
     Space,
-    NumberInput,
-    TextInput,
-    Select,
 } from "@mantine/core";
 import { IconChevronDown, IconSwitchVertical } from "@tabler/icons";
 import { useStyles } from './Style'

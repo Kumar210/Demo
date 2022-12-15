@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Card, Text, Image, Modal, NumberInput, Space } from '@mantine/core';
+import { Button, Text, Image, Modal, NumberInput, Space } from '@mantine/core';
 import { useStyles } from './Style'
 type ModelProps = {
     onClose: any
