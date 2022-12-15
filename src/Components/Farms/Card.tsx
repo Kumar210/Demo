@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStyles } from './Style'
-import { Button, Grid, Space, Text, Collapse, Badge } from '@mantine/core'
-import { IconCheck, IconChevronDown, IconChevronUp, IconCircleCheck } from '@tabler/icons'
+import { Button, Grid, Space, Text, Collapse } from '@mantine/core'
+import { IconChevronDown, IconChevronUp, IconCircleCheck } from '@tabler/icons'
 import Model from './StaclLP_Model'
 import Transfermodal from './TransferModel'
 import CountUp from 'react-countup';

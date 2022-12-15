@@ -27,7 +27,6 @@ const useStyles = createStyles((theme) => ({
         display: "flex",
         flexDirection: "row",
     },
-
     Btn: {
         width: "100%",
         backgroundColor: "#43E3E091",
@@ -94,7 +93,6 @@ const useStyles = createStyles((theme) => ({
         borderRadius: '5px',
         color: '#3c524f',
         background: 'transparent',
-        // width: '10em',
         fontWeight: 'bold'
     },
 

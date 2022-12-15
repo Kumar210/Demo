@@ -32,6 +32,7 @@ const Farms = () => {
 
 
 
+
     return (
         <div className={classes.Parent_Cointainer} >
             <div className={classes.Cointainer} >
@@ -75,7 +76,6 @@ const Farms = () => {
                             rightSection={<IconChevronDown size={14} />}
                             className={classes.select}
                             onChange={(e) => console.log(e)}
-
                         >
                         </Select>
                         <TextInput
